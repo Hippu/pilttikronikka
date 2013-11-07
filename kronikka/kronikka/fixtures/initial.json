@@ -1,0 +1,123 @@
+[
+{
+  "pk": 1, 
+  "model": "kronikka.tutor", 
+  "fields": {
+    "organization": "as", 
+    "name": "Riku Riskitutor"
+  }
+},
+{
+  "pk": 2, 
+  "model": "kronikka.tutor", 
+  "fields": {
+    "organization": "di", 
+    "name": "Tuima Digitutor"
+  }
+},
+{
+  "pk": 3, 
+  "model": "kronikka.tutor", 
+  "fields": {
+    "organization": "as", 
+    "name": "Janne Jyr\u00e4"
+  }
+},
+{
+  "pk": 4, 
+  "model": "kronikka.tutor", 
+  "fields": {
+    "organization": "di", 
+    "name": "Eemeli Asikainen"
+  }
+},
+{
+  "pk": 5, 
+  "model": "kronikka.tutor", 
+  "fields": {
+    "organization": "di", 
+    "name": "Minna Monni"
+  }
+},
+{
+  "pk": 1, 
+  "model": "kronikka.student", 
+  "fields": {
+    "tutor": 1, 
+    "name": "Eetu Erikoinen", 
+    "thumbnail": "thumbnails/nic_cage.jpg"
+  }
+},
+{
+  "pk": 2, 
+  "model": "kronikka.student", 
+  "fields": {
+    "tutor": 2, 
+    "name": "Anneli Nieminen", 
+    "thumbnail": "thumbnails/nic_cage.jpg"
+  }
+},
+{
+  "pk": 3, 
+  "model": "kronikka.student", 
+  "fields": {
+    "tutor": 1, 
+    "name": "Viivi Valpas", 
+    "thumbnail": "thumbnails/nic_cage.jpg"
+  }
+},
+{
+  "pk": 4, 
+  "model": "kronikka.student", 
+  "fields": {
+    "tutor": 2, 
+    "name": "Taneli Ter\u00e4v\u00e4", 
+    "thumbnail": "thumbnails/nic_cage.jpg"
+  }
+},
+{
+  "pk": 5, 
+  "model": "kronikka.student", 
+  "fields": {
+    "tutor": 1, 
+    "name": "Raimo Majava", 
+    "thumbnail": "thumbnails/nic_cage.jpg"
+  }
+},
+{
+  "pk": 6, 
+  "model": "kronikka.student", 
+  "fields": {
+    "tutor": 3, 
+    "name": "Satu Selv\u00e4", 
+    "thumbnail": "thumbnails/nic_cage.jpg"
+  }
+},
+{
+  "pk": 7, 
+  "model": "kronikka.student", 
+  "fields": {
+    "tutor": 4, 
+    "name": "Ahne Ahma", 
+    "thumbnail": "thumbnails/nic_cage.jpg"
+  }
+},
+{
+  "pk": 8, 
+  "model": "kronikka.student", 
+  "fields": {
+    "tutor": 5, 
+    "name": "Jonna Joutava", 
+    "thumbnail": "thumbnails/nic_cage.jpg"
+  }
+},
+{
+  "pk": 9, 
+  "model": "kronikka.student", 
+  "fields": {
+    "tutor": 2, 
+    "name": "Iiro Ihmeellinen", 
+    "thumbnail": "thumbnails/nic_cage.jpg"
+  }
+}
+]
