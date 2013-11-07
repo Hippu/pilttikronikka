@@ -36,3 +36,4 @@ nosetests.xml
 .pydevproject
 *.sublime-project
 *.sublime-workspace
+*.sqlite

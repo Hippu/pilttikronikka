@@ -8,19 +8,43 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="row">
+
+			<div class="row" id="header-row">
 				<div class="col-sm-8 col-sm-offset-4">
 					<h1>Pilttikronikat</h1>
-					<h2>Valitse puolesi!</h2>
 				</div>
 			</div>
-			<div class="row" id="search_div">
-				<div class="col-sm6 col-sm-offset-4">
-				Test
+
+			<div class="row" id="search-row">
+				<div class="col-sm-5 col-sm-offset-4">
+					<form class="form-inline" role="form" method="GET" action="/">
+					<div class="form-group">
+						<input type="text" class="form-control" name="name" placeholder="Hae nimen perusteella">
+					</div>
+						<button class="btn btn-default" type="submit">Hae</button>
+					</form>
 				</div>
 			</div>
+
+			<div class="row" id="main-row">
+			{% regroup students by tutor as tutor_list %}
+				{% for tutor in tutor_list %}
+				<div class="col-md-6">
+					<h3>{{ tutor.grouper.name }} <small>{{ tutor.grouper.get_organization_display }}</small></h3>
+					<div class="row">
+					{% for student in tutor.list %}					
+					<div class="col-md-6">
+						<img src="{{ student.thumbnail.url }}" alt="thumbnail" class="img-thumbnail" width="80px">
+						{{ student.name }}
+					</div>
+					{% endfor %}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
 		</div>
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 	</body>
 </html>
