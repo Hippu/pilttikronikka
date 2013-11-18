@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, url
-from .views import index, student_stories
+from .views import index, student_stories, new_student_story
 
 urlpatterns = patterns(
     '',
@@ -13,4 +13,9 @@ urlpatterns = patterns(
         view=student_stories,
         name="student",
     ),
+    url(
+        regex='^student/(?P<student_id>\d+)/new_story/$',
+        view=new_student_story,
+        name="new_story"
+    )
 )
