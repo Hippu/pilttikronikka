@@ -3,6 +3,7 @@ Pillow==2.2.1
 South==0.8.2
 Unipath==1.0
 argparse==1.2.1
+django-crispy-forms==1.4.0
 django-debug-toolbar==0.10.2
 docutils==0.11
 sqlparse==0.1.10
