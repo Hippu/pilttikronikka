@@ -11,7 +11,7 @@
 
 			<div class="row" id="header-row">
 				<div class="col-sm-8 col-sm-offset-4">
-					<h1>Pilttikronikat</h1>
+					<a href="{% url 'index' %}"><h1>Pilttikronikat</h1></a>
 				</div>
 			</div>
 
@@ -26,6 +26,7 @@
 				</div>
 			</div>
 
+			{% block main %}
 			<div class="row" id="main-row">
 			{% regroup students by tutor as tutor_list %}
 				{% for tutor in tutor_list %}
@@ -34,15 +35,17 @@
 					<div class="row">
 					{% for student in tutor.list %}					
 					<div class="col-md-6">
+						<a href="{{student.get_absolute_url}}">
 						<img src="{{ student.thumbnail.url }}" alt="thumbnail" class="img-thumbnail" width="80px">
-						{{ student.name }}
+						{{ student.name }} <small> ({{ student.story_count }}) </small>
+						</a>
 					</div>
 					{% endfor %}
 					</div>
 				</div>
 				{% endfor %}
 			</div>
-
+			{% endblock %}
 		</div>
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script src="{% static 'js/bootstrap.min.js' %}"></script>

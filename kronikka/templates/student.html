@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block main %}
+<br>
+<div class="row">
+	<div class="col-md-8">
+		<div class="col-sm-3">
+			<img class="img-thumbnail" src="{{ student.thumbnail.url }}">
+		</div>
+		<div class="col-sm-9">
+			<h1 class="text-left center-block">{{ student.name }}</h1>
+		</div>
+	</div>
+</div>
+<div class="row">
+<div class="col-md-10 col-md-offset-2">
+	{% for story in stories %}
+	<div class="{{ story.get_bootstrap_column_size }}">
+		<blockquote>
+			<p>{{ story.story }}</p>
+			<small>{{ story.writer_nick }}</small>
+		</blockquote>
+	</div>
+	{% endfor %}
+</div>
+
+{% endblock %}
