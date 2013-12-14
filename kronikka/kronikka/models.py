@@ -23,7 +23,7 @@ class Student(models.Model):
     """ Django model for the student """
     name = models.CharField(max_length=30)
     thumbnail = models.ImageField(upload_to="thumbnails/",
-                                  default="thumbnails/nic_cage.jpg")
+                                  default="nic_cage.jpg")
     tutor = models.ForeignKey(Tutor)
 
     def __unicode__(self):

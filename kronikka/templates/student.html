@@ -16,6 +16,7 @@
 </div>
 <div class="row">
 <div class="col-md-10 col-md-offset-2">
+	{% if user.is_authenticated %}
 	{% for story in stories %}
 	<div class="{{ story.get_bootstrap_column_size }}">
 		<blockquote>
@@ -24,6 +25,9 @@
 		</blockquote>
 	</div>
 	{% endfor %}
+	{% else %}
+	<h2 class="text-center"> {{ stories.count }} kronikkaa kirjoitettu </h2>
+	{% endif %}
 </div>
 </div>
 <div class="row">
