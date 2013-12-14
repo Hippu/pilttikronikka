@@ -2,6 +2,12 @@ from base import *
 
 DEBUG = False
 
+STATIC_ROOT = '/var/www/kronikat/static'
+
+MEDIA_ROOT = '/var/www/kronikat/media'
+
+ALLOWED_HOSTS = ['kronikat.hippuu.fi']
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
