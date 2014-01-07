@@ -5,4 +5,4 @@ from .models import Story
 class StoryForm(ModelForm):
     class Meta:
         model = Story
-        fields = ("story", "writer_nick")
+        fields = ("story", )

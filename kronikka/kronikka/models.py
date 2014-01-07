@@ -36,8 +36,7 @@ class Student(models.Model):
 class Story(models.Model):
     """ An user submitted story about a student """
     student = models.ForeignKey(Student)
-    story = models.TextField()
-    writer_nick = models.CharField(max_length=20, default="Haamukirjoittaja")
+    story = models.TextField(verbose_name="Kronikkateksti")
 
     def __unicode__(self):
         return self.story[:50]
